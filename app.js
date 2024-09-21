@@ -32,12 +32,12 @@ app.post(`/register`, (req, res) => {
                 password
             })
             user.save();
-            res.send(201);
+            res.sendStatus(201);
         } catch (error) {
             console.log(500);
         }
     } else {
-        res.send(400);
+        res.sendStatus(400);
     }
 });
 
