@@ -26,7 +26,7 @@ app.get('/users', (req, res) => {
 });
 
 
-app.get(`/allusers`, async (req, res) => {
+app.get(`/allUsers`, async (req, res) => {
     const users = await User.find();
     res.send(users);
 })
