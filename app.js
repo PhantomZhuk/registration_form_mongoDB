@@ -21,6 +21,17 @@ app.get('/', (req, res) => {
     res.sendFile(__dirname + '/public/index.html');
 });
 
+app.get('/users', (req, res) => {
+    res.sendFile(__dirname + '/public/users/index.html');
+});
+
+
+app.get(`/allusers`, async (req, res) => {
+    const users = await User.find();
+    res.send(users);
+})
+
+
 app.post(`/register`, (req, res) => {
     const { login, password } = req.body;
     console.log(login, password);
@@ -41,10 +52,6 @@ app.post(`/register`, (req, res) => {
     }
 });
 
-app.get(`/allusers`, async (req, res) => {
-    const users = await User.find();
-    res.send(users);
-})
 
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
