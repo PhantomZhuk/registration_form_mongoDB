@@ -139,4 +139,34 @@
             }
         }
     }
+
+    @keyframes wrongly {
+        0% {
+            margin-right: 0;
+            margin-left: 30px;
+            box-shadow: 0 0 5px 0 #ff0000;
+        }
+
+        25% {
+            margin-right: 30px;
+            margin-left: 0;
+            box-shadow: 0 0 5px 0 #ff0000;
+        }
+
+        50% {
+            margin-right: 0;
+            margin-left: 30px;
+            box-shadow: 0 0 5px 0 #ff0000;
+        }
+
+        75% {
+            margin-right: 30px;
+            margin-left: 0;
+            box-shadow: 0 0 5px 0 #ff0000;
+        }
+
+        100% {
+            margin: 0;
+        }
+    }
 }

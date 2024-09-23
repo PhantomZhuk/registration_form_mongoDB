@@ -29,10 +29,18 @@ $(document).ready(() => {
                         console.log(err.message);
                     })
             } else {
+                $(`.registerContainer`).css(`animation`, `0.4s ease forwards wrongly`);
                 $(`.passwordRequirementsContainer`).text(`Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, one number and one special character.`);
+                setTimeout(() => {
+                    $(`.registerContainer`).css(`animation`, `none`);
+                }, 500)
             }
         } else {
+            $(`.registerContainer`).css(`animation`, `0.4s ease forwards wrongly`);
             $(`.loginRequirementsContainer`).text(`Login must be at least 3 characters long and contain only letters and numbers.`);
+            setTimeout(() => {
+                $(`.registerContainer`).css(`animation`, `none`);
+            }, 500)
         }
     })
 
